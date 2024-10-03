@@ -1,0 +1,52 @@
+@font-face {
+  src: url(/assets/fonts/Lenora/LenoraPremium-Regular.otf) format("otf");
+  font-family: "Lenora";
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(/assets/fonts/Lenora/LenoraPremium-Medium.otf) format("otf");
+  font-family: "Lenora";
+  font-weight: 500;
+}
+
+@font-face {
+  src: url(/assets/fonts/Lenora/LenoraPremium-Semibold.otf) format("otf");
+  font-family: "Lenora";
+  font-weight: 600;
+}
+
+@font-face {
+  src: url(/assets/fonts/Lenora/LenoraPremium-Bold.otf) format("otf");
+  font-family: "Lenora";
+  font-weight: 700;
+}
+
+@font-face {
+  src: url(/assets/fonts/Lenora/LenoraPremium-Light.otf) format("otf");
+  font-family: "Lenora";
+  font-weight: 300;
+}
+
+@font-face {
+  src: url(/assets/fonts/Lenora/LenoraPremium-Black.otf) format("otf");
+  font-family: "Lenora";
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../assets/fonts/Proxima Nova/ProximaNova-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Proxima Nova/ProximaNova-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url("../assets/fonts/Proxima Nova/ProximaNova-Bold.woff2") format("woff2"),
+    url("../assets/fonts/Proxima Nova/ProximaNova-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
