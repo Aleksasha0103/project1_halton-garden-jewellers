@@ -10,26 +10,26 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif; /* Основной шрифт для текста */
-  background-color: #f0f0f0;
-  color: #333;
-  line-height: 1.6;
+  font-family: "Proxima Nova", sans-serif; /* Основной шрифт для текста */
+  background-color: #ffffff;
+  color: #000000;
+  min-width: 320px;
 
-  /* Устанавливаем фоновое изображение */
-  background-image: url(/assets/images/Cover.svg); /* Относительный путь к Cover.svg */
-  background-size: cover; /* Изображение покроет всю ширину экрана, сохраняя пропорции */
-  background-position: center top; /* Центрируем изображение по горизонтали, привязываем к верхнему краю */
-  background-repeat: no-repeat; /* Отключаем повторение изображения */
-  height: 100px; /* Ограничиваем высоту блока */
-  overflow: hidden; /* Обрезаем изображение, если оно выходит за пределы блока */
+  //   /* Устанавливаем фоновое изображение */
+  //   background-image: url("/assets/images/Cover.svg"); /* Относительный путь к Cover.svg */
+  //   background-size: cover; /* Изображение покроет всю ширину экрана, сохраняя пропорции */
+  //   background-position: center top; /* Центрируем изображение по горизонтали, привязываем к верхнему краю */
+  //   background-repeat: no-repeat; /* Отключаем повторение изображения */
+  //   height: 100px; /* Ограничиваем высоту блока */
+  //   overflow: hidden; /* Обрезаем изображение, если оно выходит за пределы блока */
 }
 
 // Стили для секции hero
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background-image: url(/assets/images/Cover.svg); // Путь к изображению
+  // height: 100vh;
+  background-image: url("/assets/images/Cover.svg"); // Путь к изображению
   background-size: cover;
   background-position: center;
   display: flex;
@@ -44,7 +44,7 @@ body {
   }
 
   &__title {
-    font-family: "Playfair Display", serif; // Шрифт для заголовка
+    font-family: "Lenora", serif; // Шрифт для заголовка
     font-weight: 400;
     font-size: 150px;
     line-height: 1.1; // Межстрочный интервал для обеих строк
@@ -76,6 +76,69 @@ body {
       background-color: rgba(255, 255, 255, 0.2);
     }
   }
+}
+
+h2 {
+  font-family: "Lenora", sans-serif;
+  font-weight: 400;
+  font-size: 3.75rem;
+  text-align: left;
+}
+
+h3 {
+  font-family: "Lenora", sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h4,
+figure {
+  font-family: "Lenora", sans-serif;
+  font-weight: 500;
+  font-size: 1.875rem;
+  text-align: center;
+}
+
+// figure {
+//   height: 3.75rem;
+// }
+
+.jewellery-slider h3 {
+  margin: 3.75rem 0 1.75rem 0;
+}
+
+.jewellery-slider__container {
+  max-width: 1328px;
+  margin: 0 auto;
+  position: relative;
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    color: #000000;
+    font-size: 50px;
+    font-weight: 100;
+  }
+}
+
+.jewellery-slider {
+  margin-bottom: 6rem;
+}
+
+.jewellery-slider__img-box {
+  width: 30rem;
+  height: 30rem;
+  text-align: center;
+}
+
+.jewellery-slider__img-box img {
+  object-fit: cover;
 }
 
 /* ===================== */
