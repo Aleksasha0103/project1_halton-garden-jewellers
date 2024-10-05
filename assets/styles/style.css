@@ -30,7 +30,7 @@
 }
 
 body {
-  font-family: "Proxima Nova", sans-serif; /* Основной шрифт для текста */
+  font-family: "Proxima Nova", sans-serif;
   background-color: #ffffff;
   color: #000000;
   min-width: 320px;
@@ -39,7 +39,8 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  background-image: url("/assets/images/Cover.svg");
+  background-image: url("/assets/images/Cover.jpg");
+  background-size: contain;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -61,11 +62,10 @@ body {
   max-width: none;
 }
 .hero__description {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.8;
-  letter-spacing: 0.05em;
   margin-bottom: 30px;
   max-width: none;
 }
@@ -144,34 +144,87 @@ figure {
      object-fit: cover;
 }
 
+.shop-category {
+  background-color: #fff;
+  padding: 4rem 0;
+}
+.shop-category h2 {
+  font-family: "Lenora", serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+.shop-category .shop-category__item {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 424px;
+}
+.shop-category .shop-category__item img {
+  width: 424px;
+  height: 512px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.shop-category .shop-category__item .shop-category__title {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
 /* ===================== */
 /* Медиа-запросы для адаптивности */
 /* ===================== */
+/* Для экранов с шириной 1920px и выше */
+@media screen and (min-width: 1920px) {
+  .hero__title {
+    font-size: 6rem;
+  }
+  .hero__description {
+    font-size: 1.8rem;
+    max-width: 60rem;
+  }
+  .hero__button {
+    font-size: 1.2rem;
+    padding: 20px 35px;
+  }
+  .jewellery-slider__img-box {
+    width: 35rem;
+    height: 35rem;
+  }
+}
 /* Для экранов с шириной 1280px и выше */
 @media screen and (max-width: 1280px) {
   .hero__title {
-    font-size: 3.5rem; /* Уменьшаем размер заголовка */
+    font-size: 3.5rem;
   }
   .hero__button {
-    font-size: 0.9rem; /* Уменьшаем текст кнопки */
-    padding: 12px 25px; /* Изменяем размер кнопки */
+    font-size: 0.9rem;
+    padding: 12px 25px;
+  }
+  .shop-category__item img {
+    width: 35rem;
+    height: 35rem;
   }
 }
 /* Для планшетов (ширина до 768px) */
 @media screen and (max-width: 768px) {
   .hero {
-    justify-content: center; /* Центрируем контент */
-    padding-left: 20px; /* Уменьшаем отступы */
+    justify-content: center;
+    padding-left: 20px;
   }
   .hero__title {
-    font-size: 2.5rem; /* Ещё больше уменьшаем заголовок */
+    font-size: 2.5rem;
   }
   .hero__description {
-    font-size: 1rem; /* Уменьшаем описание */
+    font-size: 1rem;
   }
   .hero__button {
-    font-size: 0.8rem; /* Уменьшаем текст кнопки */
-    padding: 10px 20px; /* Сокращаем размеры кнопки */
+    font-size: 0.8rem;
+    padding: 10px 20px;
   }
 }
 /* Для мобильных устройств (ширина до 320px) */
@@ -191,4 +244,4 @@ figure {
     font-size: 0.7rem; /* Маленький текст кнопки */
     padding: 8px 15px; /* Ещё меньше кнопка */
   }
-}
+}/*# sourceMappingURL=style.css.map */

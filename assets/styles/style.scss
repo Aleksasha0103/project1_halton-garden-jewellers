@@ -10,26 +10,18 @@
 }
 
 body {
-  font-family: "Proxima Nova", sans-serif; /* Основной шрифт для текста */
+  font-family: "Proxima Nova", sans-serif; 
   background-color: #ffffff;
   color: #000000;
   min-width: 320px;
-
-  //   /* Устанавливаем фоновое изображение */
-  //   background-image: url("/assets/images/Cover.svg"); /* Относительный путь к Cover.svg */
-  //   background-size: cover; /* Изображение покроет всю ширину экрана, сохраняя пропорции */
-  //   background-position: center top; /* Центрируем изображение по горизонтали, привязываем к верхнему краю */
-  //   background-repeat: no-repeat; /* Отключаем повторение изображения */
-  //   height: 100px; /* Ограничиваем высоту блока */
-  //   overflow: hidden; /* Обрезаем изображение, если оно выходит за пределы блока */
 }
 
 // Стили для секции hero
 .hero {
   position: relative;
   width: 100%;
-  // height: 100vh;
-  background-image: url("/assets/images/Cover.svg"); // Путь к изображению
+  background-image: url("/assets/images/Cover.jpg"); 
+  background-size: contain;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -40,33 +32,32 @@ body {
   &__content {
     max-width: none;
     color: #fff;
-    text-align: left; // Выравнивание текста по левому краю
+    text-align: left; 
   }
 
   &__title {
-    font-family: "Lenora", serif; // Шрифт для заголовка
+    font-family: "Lenora", serif; 
     font-weight: 400;
     font-size: 150px;
-    line-height: 1.1; // Межстрочный интервал для обеих строк
+    line-height: 1.1;
     margin-bottom: 20px;
-    max-width: none; // Максимальная ширина блока с заголовком
+    max-width: none; 
   }
 
   &__description {
-    font-family: "Open Sans", sans-serif; // Шрифт для описания
-    font-size: 1.5rem; // Размер шрифта для описания
+    font-family: "Proxima Nova", sans-serif; 
+    font-size: 1.5rem; 
     font-weight: 300;
-    line-height: 1.8; // Увеличенное расстояние между строками
-    letter-spacing: 0.05em; // Увеличенное расстояние между символами
+    line-height: 1.8; 
     margin-bottom: 30px;
-    max-width: none; // Ширина блока для текста
+    max-width: none; 
   }
 
   &__button {
     display: inline-block;
     padding: 15px 30px;
     font-size: 1rem;
-    font-family: "Proxima Nova", sans-serif; // Подключаем шрифт для кнопки
+    font-family: "Proxima Nova", sans-serif; 
     color: #fff;
     text-decoration: none;
     border: 1px solid #fff;
@@ -141,40 +132,103 @@ figure {
   object-fit: cover;
 }
 
+// Секция Shop By Category
+.shop-category {
+  background-color: #fff;
+  padding: 4rem 0;
+
+  h2 {
+    font-family: 'Lenora', serif; 
+    font-size: 40px;  
+    font-weight: 500;  
+    line-height: 40px;  
+    text-align: center;  
+    display: block; 
+    width: 100%; 
+  }
+
+  .shop-category__item {
+    text-align: center;
+    margin-left: auto;  
+    margin-right: auto; 
+    max-width: 424px;
+
+    img {
+      width: 424px;
+      height: 512px; 
+      object-fit: cover;  
+    }
+
+    .shop-category__title {
+      font-family: 'Proxima Nova', sans-serif;  
+      font-size: 1rem; 
+      margin-top: 1rem;
+    }
+  }
+}
+
 /* ===================== */
 /* Медиа-запросы для адаптивности */
 /* ===================== */
 
-/* Для экранов с шириной 1280px и выше */
-@media screen and (max-width: 1280px) {
+/* Для экранов с шириной 1920px и выше */
+@media screen and (min-width: 1920px) {
   .hero__title {
-    font-size: 3.5rem; /* Уменьшаем размер заголовка */
+    font-size: 6rem;  
+  }
+
+  .hero__description {
+    font-size: 1.8rem;  
+    max-width: 60rem;  
   }
 
   .hero__button {
-    font-size: 0.9rem; /* Уменьшаем текст кнопки */
-    padding: 12px 25px; /* Изменяем размер кнопки */
+    font-size: 1.2rem;  
+    padding: 20px 35px; 
+  }
+
+  .jewellery-slider__img-box {
+    width: 35rem;  
+    height: 35rem;
+  }
+}
+
+
+/* Для экранов с шириной 1280px и выше */
+@media screen and (max-width: 1280px) {
+  .hero__title {
+    font-size: 3.5rem;
+  }
+
+  .hero__button {
+    font-size: 0.9rem; 
+    padding: 12px 25px; 
+  }
+
+  .shop-category__item img {
+    width: 35rem;
+    height: 35rem;
   }
 }
 
 /* Для планшетов (ширина до 768px) */
 @media screen and (max-width: 768px) {
   .hero {
-    justify-content: center; /* Центрируем контент */
-    padding-left: 20px; /* Уменьшаем отступы */
+    justify-content: center; 
+    padding-left: 20px; 
   }
 
   .hero__title {
-    font-size: 2.5rem; /* Ещё больше уменьшаем заголовок */
+    font-size: 2.5rem; 
   }
 
   .hero__description {
-    font-size: 1rem; /* Уменьшаем описание */
+    font-size: 1rem; 
   }
 
   .hero__button {
-    font-size: 0.8rem; /* Уменьшаем текст кнопки */
-    padding: 10px 20px; /* Сокращаем размеры кнопки */
+    font-size: 0.8rem; 
+    padding: 10px 20px; 
   }
 }
 
