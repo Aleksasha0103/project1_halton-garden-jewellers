@@ -91,9 +91,6 @@ figure {
   text-align: center;
 }
 
-// figure {
-//   height: 3.75rem;
-// }
 
 .jewellery-slider h3 {
   margin: 3.75rem 0 1.75rem 0;
@@ -163,6 +160,69 @@ figure {
       font-family: 'Proxima Nova', sans-serif;  
       font-size: 1rem; 
       margin-top: 1rem;
+    }
+  }
+}
+
+// Секция Shop By Category
+
+.invitation {
+  position: relative;
+  background-image: url("/assets/images/invitation.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 384px; // Высота блока для экрана 1440px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden; // Чтобы псевдоэлемент не выходил за пределы блока
+
+  // Затемнение фона через псевдоэлемент
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; // Убедимся, что затемнение находится под контентом
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2; 
+  }
+
+  &__title {
+    font-family: "Lenora", serif; 
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-family: "Proxima Nova", sans-serif; 
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1rem;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
     }
   }
 }
