@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Proxima Nova", sans-serif; 
+  font-family: "Proxima Nova", sans-serif;
   background-color: #ffffff;
   color: #000000;
   min-width: 320px;
@@ -20,7 +20,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  background-image: url("/assets/images/Cover.jpg"); 
+  background-image: url("/assets/images/Cover.jpg");
   background-size: contain;
   background-size: cover;
   background-position: center;
@@ -32,32 +32,32 @@ body {
   &__content {
     max-width: none;
     color: #fff;
-    text-align: left; 
+    text-align: left;
   }
 
   &__title {
-    font-family: "Lenora", serif; 
+    font-family: "Lenora", serif;
     font-weight: 400;
     font-size: 150px;
     line-height: 1.1;
     margin-bottom: 20px;
-    max-width: none; 
+    max-width: none;
   }
 
   &__description {
-    font-family: "Proxima Nova", sans-serif; 
-    font-size: 1.5rem; 
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1.5rem;
     font-weight: 300;
-    line-height: 1.8; 
+    line-height: 1.8;
     margin-bottom: 30px;
-    max-width: none; 
+    max-width: none;
   }
 
   &__button {
     display: inline-block;
     padding: 15px 30px;
     font-size: 1rem;
-    font-family: "Proxima Nova", sans-serif; 
+    font-family: "Proxima Nova", sans-serif;
     color: #fff;
     text-decoration: none;
     border: 1px solid #fff;
@@ -69,6 +69,42 @@ body {
   }
 }
 
+// Секция Shop By Category
+.shop-category {
+  background-color: #fff;
+  padding: 4rem 0;
+
+  h2 {
+    font-family: "Lenora", serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  .shop-category__item {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 424px;
+
+    img {
+      width: 424px;
+      height: 512px;
+      object-fit: cover;
+    }
+
+    .shop-category__title {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+//Секция Our Favourites
 h2 {
   font-family: "Lenora", sans-serif;
   font-weight: 400;
@@ -84,21 +120,28 @@ h3 {
 }
 
 h4,
-figure {
+figcaption {
   font-family: "Lenora", sans-serif;
   font-weight: 500;
   font-size: 1.875rem;
   text-align: center;
 }
 
-
 .jewellery-slider h3 {
-  margin: 3.75rem 0 1.75rem 0;
+  margin-bottom: 1.75rem;
+  margin-top: 3.75rem;
+}
+
+.jewellery-slider {
+  margin-top: 3.75rem;
+  margin-bottom: 6rem;
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
 }
 
 .jewellery-slider__container {
-  max-width: 1328px;
-  margin: 0 auto;
+  max-width: 1440px;
+  margin: 0rem auto 6rem auto;
   position: relative;
   .owl-nav {
     position: absolute;
@@ -113,118 +156,37 @@ figure {
     font-size: 50px;
     font-weight: 100;
   }
+
+  .button:focus {
+    outline: 0px !important;
+  }
 }
 
-.jewellery-slider {
-  margin-bottom: 6rem;
+.jewellery-slider__wrapper {
+  max-width: 1440px;
+  height: 30rem;
+}
+
+.owl-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 30rem;
+  height: 30rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem !important;
 }
 
 .jewellery-slider__img-box {
-  width: 30rem;
-  height: 30rem;
-  text-align: center;
+  width: 19rem;
+  height: 19rem;
 }
 
 .jewellery-slider__img-box img {
+  max-width: 19rem;
+  max-height: 19rem;
   object-fit: cover;
-}
-
-// Секция Shop By Category
-.shop-category {
-  background-color: #fff;
-  padding: 4rem 0;
-
-  h2 {
-    font-family: 'Lenora', serif; 
-    font-size: 40px;  
-    font-weight: 500;  
-    line-height: 40px;  
-    text-align: center;  
-    display: block; 
-    width: 100%; 
-  }
-
-  .shop-category__item {
-    text-align: center;
-    margin-left: auto;  
-    margin-right: auto; 
-    max-width: 424px;
-
-    img {
-      width: 424px;
-      height: 512px; 
-      object-fit: cover;  
-    }
-
-    .shop-category__title {
-      font-family: 'Proxima Nova', sans-serif;  
-      font-size: 1rem; 
-      margin-top: 1rem;
-    }
-  }
-}
-
-// Секция Shop By Category
-
-.invitation {
-  position: relative;
-  background-image: url("/assets/images/invitation.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 384px; // Высота блока для экрана 1440px
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  overflow: hidden; // Чтобы псевдоэлемент не выходил за пределы блока
-
-  // Затемнение фона через псевдоэлемент
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 1; // Убедимся, что затемнение находится под контентом
-  }
-
-  &__content {
-    position: relative;
-    z-index: 2; 
-  }
-
-  &__title {
-    font-family: "Lenora", serif; 
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 1rem;
-  }
-
-  &__description {
-    font-family: "Proxima Nova", sans-serif; 
-    font-size: 1.2rem;
-    color: white;
-    margin-bottom: 2rem;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 15px 30px;
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 1rem;
-    color: white;
-    border: 2px solid white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-  }
 }
 
 /* ===================== */
@@ -234,82 +196,76 @@ figure {
 /* Для экранов с шириной 1920px и выше */
 @media screen and (min-width: 1920px) {
   .hero__title {
-    font-size: 6rem;  
+    font-size: 6rem;
   }
 
   .hero__description {
-    font-size: 1.8rem;  
-    max-width: 60rem;  
+    font-size: 1.8rem;
+    max-width: 60rem;
   }
 
   .hero__button {
-    font-size: 1.2rem;  
-    padding: 20px 35px; 
+    font-size: 1.2rem;
+    padding: 20px 35px;
   }
 
-  .jewellery-slider__img-box {
-    width: 35rem;  
-    height: 35rem;
-  }
-}
+  /* Для экранов с шириной 1280px и выше */
+  @media screen and (max-width: 1280px) {
+    .hero__title {
+      font-size: 3.5rem;
+    }
 
+    .hero__button {
+      font-size: 0.9rem;
+      padding: 12px 25px;
+    }
 
-/* Для экранов с шириной 1280px и выше */
-@media screen and (max-width: 1280px) {
-  .hero__title {
-    font-size: 3.5rem;
-  }
-
-  .hero__button {
-    font-size: 0.9rem; 
-    padding: 12px 25px; 
-  }
-
-  .shop-category__item img {
-    width: 35rem;
-    height: 35rem;
-  }
-}
-
-/* Для планшетов (ширина до 768px) */
-@media screen and (max-width: 768px) {
-  .hero {
-    justify-content: center; 
-    padding-left: 20px; 
+    .shop-category__item img {
+      width: 35rem;
+      height: 35rem;
+    }
   }
 
-  .hero__title {
-    font-size: 2.5rem; 
+  /* Для планшетов (ширина до 768px) */
+  @media screen and (max-width: 768px) {
+    .hero {
+      justify-content: center;
+      padding-left: 20px;
+    }
+
+    .hero__title {
+      font-size: 2.5rem;
+    }
+
+    .hero__description {
+      font-size: 1rem;
+    }
+
+    .hero__button {
+      font-size: 0.8rem;
+      padding: 10px 20px;
+    }
   }
 
-  .hero__description {
-    font-size: 1rem; 
-  }
+  /* Для мобильных устройств (ширина до 320px) */
+  @media screen and (max-width: 320px) {
+    .hero {
+      justify-content: center;
+      padding-left: 10px; /* Ещё меньше отступы */
+    }
 
-  .hero__button {
-    font-size: 0.8rem; 
-    padding: 10px 20px; 
-  }
-}
+    .hero__title {
+      font-size: 1.8rem; /* Минимальный размер заголовка */
+    }
 
-/* Для мобильных устройств (ширина до 320px) */
-@media screen and (max-width: 320px) {
-  .hero {
-    justify-content: center;
-    padding-left: 10px; /* Ещё меньше отступы */
-  }
+    .hero__description {
+      font-size: 0.9rem; /* Уменьшенное описание */
+      margin-bottom: 20px;
+    }
 
-  .hero__title {
-    font-size: 1.8rem; /* Минимальный размер заголовка */
-  }
-
-  .hero__description {
-    font-size: 0.9rem; /* Уменьшенное описание */
-    margin-bottom: 20px;
-  }
-
-  .hero__button {
-    font-size: 0.7rem; /* Маленький текст кнопки */
-    padding: 8px 15px; /* Ещё меньше кнопка */
+    .hero__button {
+      font-size: 0.7rem; /* Маленький текст кнопки */
+      padding: 8px 15px; /* Ещё меньше кнопка */
+    }
   }
 }

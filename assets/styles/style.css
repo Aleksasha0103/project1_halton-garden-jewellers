@@ -84,66 +84,6 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-h2 {
-  font-family: "Lenora", sans-serif;
-  font-weight: 400;
-  font-size: 3.75rem;
-  text-align: left;
-}
-
-h3 {
-  font-family: "Lenora", sans-serif;
-  font-weight: 500;
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-h4,
-figure {
-  font-family: "Lenora", sans-serif;
-  font-weight: 500;
-  font-size: 1.875rem;
-  text-align: center;
-}
-
-.jewellery-slider h3 {
-  margin: 3.75rem 0 1.75rem 0;
-}
-
-.jewellery-slider__container {
-  max-width: 1328px;
-  margin: 0 auto;
-  position: relative;
-}
-.jewellery-slider__container .owl-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  display: flex !important;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  color: #000000;
-  font-size: 50px;
-  font-weight: 100;
-}
-
-.jewellery-slider {
-  margin-bottom: 6rem;
-}
-
-.jewellery-slider__img-box {
-  width: 30rem;
-  height: 30rem;
-  text-align: center;
-}
-
-.jewellery-slider__img-box img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .shop-category {
   background-color: #fff;
   padding: 4rem 0;
@@ -175,58 +115,88 @@ figure {
   margin-top: 1rem;
 }
 
-.invitation {
-  position: relative;
-  background-image: url("/assets/images/invitation.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 384px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h2 {
+  font-family: "Lenora", sans-serif;
+  font-weight: 400;
+  font-size: 3.75rem;
+  text-align: left;
+}
+
+h3 {
+  font-family: "Lenora", sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
   text-align: center;
-  padding: 20px;
-  overflow: hidden;
 }
-.invitation::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+
+h4,
+figcaption {
+  font-family: "Lenora", sans-serif;
+  font-weight: 500;
+  font-size: 1.875rem;
+  text-align: center;
 }
-.invitation__content {
+
+.jewellery-slider h3 {
+  margin-bottom: 1.75rem;
+  margin-top: 3.75rem;
+}
+
+.jewellery-slider {
+  margin-top: 3.75rem;
+  margin-bottom: 6rem;
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+}
+
+.jewellery-slider__container {
+  max-width: 1440px;
+  margin: 0rem auto 6rem auto;
   position: relative;
-  z-index: 2;
 }
-.invitation__title {
-  font-family: "Lenora", serif;
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 1rem;
+.jewellery-slider__container .owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: #000000;
+  font-size: 50px;
+  font-weight: 100;
 }
-.invitation__description {
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-bottom: 2rem;
+.jewellery-slider__container .button:focus {
+  outline: 0px !important;
 }
-.invitation .btn {
-  display: inline-block;
-  padding: 15px 30px;
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 1rem;
-  color: white;
-  border: 2px solid white;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+
+.jewellery-slider__wrapper {
+  max-width: 1440px;
+  height: 30rem;
 }
-.invitation .btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+
+.owl-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 30rem;
+  height: 30rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem !important;
+}
+
+.jewellery-slider__img-box {
+  width: 19rem;
+  height: 19rem;
+}
+
+.jewellery-slider__img-box img {
+  max-width: 19rem;
+  max-height: 19rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* ===================== */
@@ -245,13 +215,11 @@ figure {
     font-size: 1.2rem;
     padding: 20px 35px;
   }
-  .jewellery-slider__img-box {
-    width: 35rem;
-    height: 35rem;
-  }
+  /* Для экранов с шириной 1280px и выше */
+  /* Для планшетов (ширина до 768px) */
+  /* Для мобильных устройств (ширина до 320px) */
 }
-/* Для экранов с шириной 1280px и выше */
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1920px) and (max-width: 1280px) {
   .hero__title {
     font-size: 3.5rem;
   }
@@ -264,8 +232,7 @@ figure {
     height: 35rem;
   }
 }
-/* Для планшетов (ширина до 768px) */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1920px) and (max-width: 768px) {
   .hero {
     justify-content: center;
     padding-left: 20px;
@@ -281,8 +248,7 @@ figure {
     padding: 10px 20px;
   }
 }
-/* Для мобильных устройств (ширина до 320px) */
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 1920px) and (max-width: 320px) {
   .hero {
     justify-content: center;
     padding-left: 10px; /* Ещё меньше отступы */
@@ -298,4 +264,4 @@ figure {
     font-size: 0.7rem; /* Маленький текст кнопки */
     padding: 8px 15px; /* Ещё меньше кнопка */
   }
-}/*# sourceMappingURL=style.css.map */
+}
