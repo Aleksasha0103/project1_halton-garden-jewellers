@@ -167,13 +167,12 @@ figcaption {
   font-size: 50px;
   font-weight: 100;
 }
-.jewellery-slider__container .button:focus {
-  outline: 0px !important;
-}
 
 .jewellery-slider__wrapper {
   max-width: 1440px;
   height: 30rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .owl-item {
@@ -200,9 +199,9 @@ figcaption {
 }
 
 /* ===================== */
-/* Медиа-запросы для адаптивности */
+/* Медиазапросы для адаптивности */
 /* ===================== */
-/* Для экранов с шириной 1920px и выше */
+/* Для экранов с шириной от 1920px */
 @media screen and (min-width: 1920px) {
   .hero__title {
     font-size: 6rem;
@@ -215,11 +214,9 @@ figcaption {
     font-size: 1.2rem;
     padding: 20px 35px;
   }
-  /* Для экранов с шириной 1280px и выше */
-  /* Для планшетов (ширина до 768px) */
-  /* Для мобильных устройств (ширина до 320px) */
 }
-@media screen and (min-width: 1920px) and (max-width: 1280px) {
+/* Для экранов с шириной до 1280px */
+@media screen and (max-width: 1280px) {
   .hero__title {
     font-size: 3.5rem;
   }
@@ -231,8 +228,29 @@ figcaption {
     width: 35rem;
     height: 35rem;
   }
+  /*Адаптивы для слайдера */
+  .jewellery-slider__container {
+    max-width: 1280px;
+  }
+  .jewellery-slider__wrapper {
+    max-width: 1280px;
+    height: 26rem;
+  }
+  .owl-item {
+    width: 26.6rem;
+    height: 26rem;
+  }
+  .jewellery-slider__img-box {
+    width: 16.93rem;
+    height: 17.43rem;
+  }
+  .jewellery-slider__img-box img {
+    max-width: 16.93rem;
+    max-height: 17.43rem;
+  }
 }
-@media screen and (min-width: 1920px) and (max-width: 768px) {
+/* Для планшетов с шириной до 768px */
+@media screen and (max-width: 768px) {
   .hero {
     justify-content: center;
     padding-left: 20px;
@@ -248,7 +266,8 @@ figcaption {
     padding: 10px 20px;
   }
 }
-@media screen and (min-width: 1920px) and (max-width: 320px) {
+/* Для мобильных устройств с шириной до 320px */
+@media screen and (min-width: 320px) {
   .hero {
     justify-content: center;
     padding-left: 10px; /* Ещё меньше отступы */
