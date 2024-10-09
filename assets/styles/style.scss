@@ -18,39 +18,35 @@ body {
 
 // Стили для секции hero
 .hero {
-  position: relative;
-  width: 100%;
-  background-image: url("/assets/images/Cover.jpg");
-  background-size: contain;
-  background-size: cover;
-  background-position: center;
+  background-image: url('/assets/images/Cover.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  width: 100%; 
+  height: 768px; 
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 50px;
+  align-items: start; // Вертикальное выравнивание контента по центру
+  justify-content: flex-start; // Горизонтальное выравнивание контента (слева)
+  padding-left: 50px; // Отступ слева для текста
+  color: #fff; // Цвет текста белый для контраста с фоном
 
   &__content {
-    max-width: none;
+    max-width: 300px;
     color: #fff;
     text-align: left;
   }
 
   &__title {
-    font-family: "Lenora", serif;
-    font-weight: 400;
-    font-size: 150px;
-    line-height: 1.1;
+    font-family: 'Lenora', serif;
+    font-size: 4.5rem; // Размер заголовка
+    line-height: 1.2;
     margin-bottom: 20px;
-    max-width: none;
   }
 
   &__description {
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.5rem; 
     line-height: 1.8;
     margin-bottom: 30px;
-    max-width: none;
   }
 
   &__button {
@@ -91,8 +87,8 @@ body {
     max-width: 424px;
 
     img {
-      width: 424px;
-      height: 512px;
+      width: 100%;
+      height: auto;
       object-fit: cover;
     }
 
@@ -186,6 +182,70 @@ figcaption {
   max-height: 19rem;
   object-fit: cover;
 }
+
+.invitation {
+  position: relative;
+  background-image: url("/assets/images/invitation.jpg"); // путь к фоновому изображению
+  background-size: cover;
+  background-position: center;
+  height: 384px; // Высота блока для экрана 1440px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden; // Чтобы псевдоэлемент не выходил за пределы блока
+
+  // Затемнение фона через псевдоэлемент
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Полупрозрачное затемнение
+    z-index: 1; // Убедимся, что затемнение находится под контентом
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2; // Контент поверх затемнения
+  }
+
+  &__title {
+    font-family: "Lenora", serif; // Используем шрифт Lenora
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-family: "Proxima Nova", sans-serif; // Используем шрифт Proxima Nova
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1rem;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+
+
 
 /* ===================== */
 /* Медиазапросы для адаптивности */
