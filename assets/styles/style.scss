@@ -18,11 +18,11 @@ body {
 
 // Стили для секции hero
 .hero {
-  background-image: url('/assets/images/Cover.jpg'); 
-  background-size: cover; 
-  background-position: center; 
-  width: 100%; 
-  height: 768px; 
+  background-image: url("/assets/images/Cover.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 768px;
   display: flex;
   align-items: start; // Вертикальное выравнивание контента по центру
   justify-content: flex-start; // Горизонтальное выравнивание контента (слева)
@@ -36,15 +36,15 @@ body {
   }
 
   &__title {
-    font-family: 'Lenora', serif;
+    font-family: "Lenora", serif;
     font-size: 4.5rem; // Размер заголовка
     line-height: 1.2;
     margin-bottom: 20px;
   }
 
   &__description {
-    font-family: 'Proxima Nova', sans-serif;
-    font-size: 1.5rem; 
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1.5rem;
     line-height: 1.8;
     margin-bottom: 30px;
   }
@@ -100,7 +100,7 @@ body {
   }
 }
 
-//Секция Our Favourites
+//Секция 11 Our Favourites (слайдер)
 h2 {
   font-family: "Lenora", sans-serif;
   font-weight: 400;
@@ -129,15 +129,13 @@ figcaption {
 }
 
 .jewellery-slider {
-  margin-top: 3.75rem;
-  margin-bottom: 6rem;
+  max-width: 1440px;
+  margin: 3.75rem auto 6rem auto;
   border-bottom: 1px solid #000000;
   border-top: 1px solid #000000;
 }
 
 .jewellery-slider__container {
-  max-width: 1440px;
-  margin: 0rem auto 6rem auto;
   position: relative;
   .owl-nav {
     position: absolute;
@@ -182,6 +180,88 @@ figcaption {
   max-height: 19rem;
   object-fit: cover;
 }
+// Конец секции 11 Our Favourites (слайдер)
+
+// Секция 13 Learn more
+
+.learn-more-section {
+  width: 1440px;
+  height: 59.875rem;
+  margin: 0 auto;
+  border-bottom: 1px solid #000000;
+  position: relative;
+  h3 {
+    color: #ffffff;
+    margin-top: 3.75rem;
+  }
+}
+
+.learn-more-section__background-rectangle {
+  width: 1440px;
+  height: 18.75rem;
+  margin: 0 auto;
+  background: linear-gradient(111.01deg, rgba(4, 0, 177, 0.2) -8.76%, rgba(0, 0, 0, 0) 102.99%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #363840;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+
+.learn-more-section__all-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-top: 6.125rem;
+  margin-bottom: 5rem;
+}
+
+.learn-more-section__card {
+  width: 26.5rem;
+}
+
+.learn-more-section__card-photo {
+  width: 26.5rem;
+  height: 26.5rem;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.learn-more-section__card-figcaption {
+  width: 19.44rem;
+  text-align: left;
+}
+
+.learn-more-section__card-photo-title {
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.learn-more-section__card-photo-paragraph {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+.learn-more-section__btn {
+  width: 12.475rem;
+  height: 4rem;
+  background-color: #ffffff;
+  border: 1px solid #111111;
+  border-radius: 5px;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #111111;
+  text-align: center;
+  vertical-align: middle;
+}
+// Конец секции 13 Learn more
 
 .invitation {
   position: relative;
@@ -198,7 +278,7 @@ figcaption {
 
   // Затемнение фона через псевдоэлемент
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -243,9 +323,6 @@ figcaption {
     }
   }
 }
-
-
-
 
 /* ===================== */
 /* Медиазапросы для адаптивности */
