@@ -58,13 +58,13 @@ body {
     text-decoration: none;
     border: 1px solid #fff;
     border-radius: 5px;
-    background-color: transparent; 
-  
+    background-color: transparent;
+
     &:hover {
       background-color: transparent;
-      color: #fff; 
+      color: #fff;
     }
-  }  
+  }
 }
 
 // Секция Shop By Category
@@ -87,11 +87,9 @@ body {
     margin-left: auto;
     margin-right: auto;
 
-
     img {
       width: 512px;
       height: 424px;
-
     }
 
     .shop-category__title {
@@ -127,7 +125,7 @@ body {
 
       .title {
         font-size: 3rem;
-        font-family: 'Lenora', serif;
+        font-family: "Lenora", serif;
         margin-bottom: 20px;
       }
 
@@ -159,7 +157,7 @@ body {
       max-width: 50%;
 
       .main-image {
-        width: 763px; 
+        width: 763px;
         height: 528px;
         object-fit: cover;
       }
@@ -177,48 +175,45 @@ body {
   }
 }
 
-
-
-
 // Секция invitation
 .invitation {
   position: relative;
-  background-image: url("/assets/images/invitation.jpg"); 
+  background-image: url("/assets/images/invitation.jpg");
   background-size: cover;
   background-position: center;
-  height: 384px; 
+  height: 384px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
-  overflow: hidden; 
+  overflow: hidden;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 1; 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
 
   &__content {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
   }
 
   &__title {
-    font-family: "Lenora", serif; 
+    font-family: "Lenora", serif;
     font-size: 3rem;
     color: white;
     margin-bottom: 1rem;
   }
 
   &__description {
-    font-family: "Proxima Nova", sans-serif; 
+    font-family: "Proxima Nova", sans-serif;
     font-size: 1.2rem;
     color: white;
     margin-bottom: 2rem;
@@ -239,7 +234,6 @@ body {
     }
   }
 }
-
 
 // Секция wedding-rings
 
@@ -266,7 +260,7 @@ body {
 
       .title {
         font-size: 3rem;
-        font-family: 'Lenora', serif;
+        font-family: "Lenora", serif;
         margin-bottom: 20px;
       }
 
@@ -298,7 +292,7 @@ body {
       max-width: 50%;
 
       .main-image {
-        width: 763px; 
+        width: 763px;
         height: 528px;
         object-fit: cover;
       }
@@ -315,8 +309,6 @@ body {
     }
   }
 }
-
-
 
 //Секция 11 Our Favourites (слайдер)
 h2 {
@@ -408,7 +400,7 @@ figcaption {
 
 .learn-more-section,
 .whats-new-section {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   border-bottom: 1px solid #000000;
   position: relative;
@@ -434,16 +426,16 @@ figcaption {
 
 .learn-more-section__common-container,
 .whats-new-section__common-container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding-top: 2.187rem;
+  padding-top: 3.75rem;
 }
 
 .learn-more-section__all-cards,
 .whats-new-section__all-cards {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 6.125rem;
   margin-bottom: 5rem;
@@ -453,8 +445,9 @@ figcaption {
   margin-bottom: 5.5rem;
 }
 
-.learn-more-section__card-photo .whats-new-section__card-photo {
-  object-fit: fill;
+.learn-more-section__card-photo,
+.whats-new-section__card-photo {
+  object-fit: cover;
 }
 
 .learn-more-section__card1,
@@ -535,23 +528,19 @@ figcaption {
   width: 23.25rem;
   font-family: "Proxima Nova", sans-serif;
   font-size: 1.5rem;
-  margin-bottom: 1.375rem;
+  margin-bottom: 1.31rem;
 }
 
 .learn-more-section__card-photo-paragraph,
 .whats-new-section__card-photo-paragraph {
+  display: block;
+  height: 4.25rem;
   font-family: "Proxima Nova", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
   text-align: left;
   margin-bottom: 1.25rem;
   line-height: 1.25rem;
-}
-
-.whats-new-section__card-photo-paragraph {
-  display: block;
-  height: 5rem;
-  margin-bottom: 1.25rem;
 }
 
 .learn-more-section__btn,
@@ -676,6 +665,75 @@ figcaption {
   .jewellery-slider__container {
     max-width: 1280px;
   }
+
+  /*Адаптивы для секций 11 и 13 */
+  .learn-more-section,
+  .whats-new-section {
+    max-width: 1280px;
+  }
+
+  .learn-more-section::before,
+  .whats-new-section::before {
+    height: 290px;
+  }
+
+  .learn-more-section__common-container,
+  .whats-new-section__common-container {
+    max-width: 1168px;
+  }
+
+  .learn-more-section__all-cards {
+    max-width: 1168px;
+    margin-top: 4rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .whats-new-section__all-cards {
+    max-width: 1168px;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .learn-more-section__card1,
+  .learn-more-section__card2,
+  .learn-more-section__card3,
+  .whats-new-section__card1,
+  .whats-new-section__card2,
+  .whats-new-section__card3,
+  .learn-more-section__card-photo,
+  .whats-new-section__card-photo {
+    width: 23.187rem;
+  }
+
+  .learn-more-section__card-photo,
+  .whats-new-section__card-photo {
+    height: 23rem;
+  }
+
+  .learn-more-section__card-figcaption {
+    width: 16.94rem;
+  }
+
+  .whats-new-section__card-figcaption {
+    width: 23.19rem;
+  }
+
+  .learn-more-section__card-photo-title {
+    margin-bottom: 1.25rem;
+  }
+
+  .learn-more-section__card-photo-paragraph {
+    height: 5rem;
+    margin-bottom: 2.375rem;
+  }
+
+  .whats-new-section__card-photo-paragraph {
+    margin-bottom: 3rem;
+  }
+
+  .whats-new-section__btn {
+    padding: 25px 41px;
+  }
 }
 
 /* Для планшетов с шириной до 768px */
@@ -696,6 +754,85 @@ figcaption {
   .hero__button {
     font-size: 0.8rem;
     padding: 10px 20px;
+  }
+
+  /*Адаптивы для секций 11 и 13 */
+  .learn-more-section,
+  .whats-new-section {
+    max-width: 768px;
+  }
+
+  .learn-more-section::before,
+  .whats-new-section::before {
+    height: 190px;
+  }
+
+  .learn-more-section__common-container,
+  .whats-new-section__common-container {
+    max-width: 768px;
+    padding-top: 3.3rem;
+  }
+
+  .learn-more-section__all-cards,
+  .whats-new-section__all-cards {
+    max-width: 656px;
+    margin: 0 auto;
+    margin-top: 2.25rem;
+    margin-bottom: 4rem;
+  }
+
+  .learn-more-section__card1,
+  .learn-more-section__card2,
+  .learn-more-section__card3,
+  .whats-new-section__card1,
+  .whats-new-section__card2,
+  .whats-new-section__card3,
+  .learn-more-section__card-photo,
+  .whats-new-section__card-photo,
+  .learn-more-section__card-photo,
+  .whats-new-section__card-photo {
+    width: 12.5rem;
+  }
+
+  .learn-more-section__card-photo,
+  .whats-new-section__card-photo {
+    height: 12rem;
+  }
+
+  .learn-more-section__card-figcaption,
+  .whats-new-section__card-figcaption {
+    width: 12.5rem;
+  }
+
+  .learn-more-section__card-photo-title {
+    width: 12.5rem;
+    height: 4rem;
+    font-size: 1.75rem;
+    margin-bottom: 0.94rem;
+  }
+
+  .whats-new-section__card-photo-title {
+    width: 16.5rem;
+    height: 2.25rem;
+    font-size: 1rem;
+    margin-bottom: 1.44rem;
+  }
+
+  .learn-more-section__card-photo-paragraph,
+  .whats-new-section__card-photo-paragraph {
+    height: 4rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.75rem;
+    line-height: 1rem;
+  }
+
+  .whats-new-section__card-photo-paragraph {
+    height: 5.875rem;
+  }
+
+  .learn-more-section__btn,
+  .whats-new-section__btn {
+    padding: 19px 19px;
   }
 
   .wedding-rings {
@@ -731,7 +868,6 @@ figcaption {
   }
 }
 
-
 /* Для мобильных устройств с шириной до 320px */
 @media screen and (max-width: 320px) {
   .hero {
@@ -751,5 +887,84 @@ figcaption {
   .hero__button {
     font-size: 0.7rem; /* Маленький текст кнопки */
     padding: 8px 15px; /* Ещё меньше кнопка */
+  }
+
+  /*Адаптивы для секций 11 и 13 */
+  .learn-more-section,
+  .whats-new-section {
+    max-width: 320px;
+  }
+
+  .learn-more-section::before,
+  .whats-new-section::before {
+    height: 144px;
+  }
+
+  .learn-more-section__common-container,
+  .whats-new-section__common-container {
+    max-width: 320px;
+    padding-top: 3.3rem;
+  }
+
+  .learn-more-section__all-cards,
+  .whats-new-section__all-cards {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+
+  .learn-more-section__card1,
+  .learn-more-section__card2,
+  .learn-more-section__card3,
+  .whats-new-section__card1,
+  .whats-new-section__card2,
+  .whats-new-section__card3,
+  .learn-more-section__card-photo,
+  .whats-new-section__card-photo {
+    width: 16.5rem;
+  }
+
+  .learn-more-section__card-photo,
+  .whats-new-section__card-photo {
+    height: 16rem;
+  }
+
+  .learn-more-section__card-figcaption,
+  .whats-new-section__card-figcaption {
+    width: 16.5rem;
+  }
+
+  .learn-more-section__card-photo-title {
+    width: 12.5rem;
+    height: 4rem;
+    font-size: 1.75rem;
+    margin-bottom: 0.94rem;
+  }
+
+  .whats-new-section__card-photo-title {
+    width: 12.19rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1.19rem;
+  }
+
+  .learn-more-section__card-photo-paragraph,
+  .whats-new-section__card-photo-paragraph {
+    height: 3rem;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+    line-height: 1rem;
+  }
+
+  .whats-new-section__card-photo-paragraph {
+    height: 4.75rem;
+  }
+
+  .learn-more-section__btn {
+    padding: 18px 25px;
+  }
+
+  .whats-new-section__btn {
+    padding: 19px 60px;
   }
 }
