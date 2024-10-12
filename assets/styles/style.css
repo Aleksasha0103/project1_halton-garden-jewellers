@@ -1,25 +1,35 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @font-face {
-  src: url("/assets/fonts/Lenora/LenoraPremium-Regular.eot") format("eot"), url("/assets/fonts/Lenora/LenoraPremium-Regular.woff") format("woff"), url("/assets/fonts/Lenora/LenoraPremium-Regular.woff2") format("woff2"), url("/assets/fonts/Lenora/LenoraPremium-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Lenora/LenoraPremium-Regular.eot") format("eot"),
+    url("/assets/fonts/Lenora/LenoraPremium-Regular.woff") format("woff"),
+    url("/assets/fonts/Lenora/LenoraPremium-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Lenora/LenoraPremium-Regular.ttf") format("truetype");
   font-family: "Lenora";
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
-  src: url("/assets/fonts/Lenora/LenoraPremium-Medium.eot") format("eot"), url("/assets/fonts/Lenora/LenoraPremium-Medium.woff") format("woff"), url("/assets/fonts/Lenora/LenoraPremium-Medium.woff2") format("woff2"), url("/assets/fonts/Lenora/LenoraPremium-Medium.ttf") format("truetype");
+  src: url("/assets/fonts/Lenora/LenoraPremium-Medium.eot") format("eot"),
+    url("/assets/fonts/Lenora/LenoraPremium-Medium.woff") format("woff"),
+    url("/assets/fonts/Lenora/LenoraPremium-Medium.woff2") format("woff2"),
+    url("/assets/fonts/Lenora/LenoraPremium-Medium.ttf") format("truetype");
   font-family: "Lenora";
   font-weight: 500;
 }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../assets/fonts/Proxima Nova/ProximaNova-Regular.woff2") format("woff2"), url("../assets/fonts/Proxima Nova/ProximaNova-Regular.woff") format("woff");
+  src: url("../assets/fonts/Proxima Nova/ProximaNova-Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/Proxima Nova/ProximaNova-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Proxima Nova Bold";
-  src: url("../assets/fonts/Proxima Nova/ProximaNova-Bold.woff2") format("woff2"), url("../assets/fonts/Proxima Nova/ProximaNova-Bold.woff") format("woff");
+  src: url("../assets/fonts/Proxima Nova/ProximaNova-Bold.woff2")
+      format("woff2"),
+    url("../assets/fonts/Proxima Nova/ProximaNova-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -103,7 +113,7 @@ body {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .shop-category .shop-category__item .shop-category__title {
   font-family: "Proxima Nova", sans-serif;
@@ -192,230 +202,7 @@ figcaption {
   max-width: 19rem;
   max-height: 19rem;
   -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.learn-more-section,
-.whats-new-section {
-  width: 1440px;
-  margin: 0 auto;
-  border-bottom: 1px solid #000000;
-  position: relative;
-}
-.learn-more-section h3,
-.whats-new-section h3 {
-  color: #ffffff;
-}
-
-.learn-more-section::before,
-.whats-new-section::before {
-  content: "";
-  width: 100%;
-  height: 300px;
-  margin: 0 auto;
-  background: linear-gradient(111.01deg, rgba(4, 0, 177, 0.2) -8.76%, rgba(0, 0, 0, 0) 102.99%), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #363840;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.learn-more-section__common-container,
-.whats-new-section__common-container {
-  width: 1440px;
-  margin: 0 auto;
-  padding-top: 2.187rem;
-}
-
-.learn-more-section__all-cards,
-.whats-new-section__all-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  margin-top: 6.125rem;
-  margin-bottom: 5rem;
-}
-
-.whats-new-section__all-cards {
-  margin-bottom: 5.5rem;
-}
-
-.learn-more-section__card-photo .whats-new-section__card-photo {
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
-.learn-more-section__card1,
-.learn-more-section__card2,
-.learn-more-section__card3,
-.whats-new-section__card1,
-.whats-new-section__card2,
-.whats-new-section__card3 {
-  width: 26.5rem;
-  position: relative;
-}
-
-.learn-more-section__card1:hover:after,
-.learn-more-section__card2:hover:after,
-.learn-more-section__card3:hover:after,
-.whats-new-section__card1:hover:after,
-.whats-new-section__card2:hover:after,
-.whats-new-section__card3:hover:after {
-  content: "";
-  width: 100%;
-  height: 424px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background: url("/assets/images/learn-more_img1_hover.png") no-repeat;
-}
-
-.learn-more-section__card2:hover:after {
-  background: url("/assets/images/learn-more_img2_hover.png") no-repeat;
-}
-
-.learn-more-section__card3:hover:after {
-  background: url("/assets/images/learn-more_img3_hover.png") no-repeat;
-}
-
-.whats-new-section__card1:hover:after {
-  background: url("/assets/images/learn-more_img3.png") no-repeat;
-}
-
-.whats-new-section__card2:hover:after {
-  background: url("/assets/images/learn-more_img2.png") no-repeat;
-}
-
-.whats-new-section__card3:hover:after {
-  background: url("/assets/images/learn-more_img3_hover.png") no-repeat;
-}
-
-.learn-more-section__card-photo,
-.whats-new-section__card-photo {
-  width: 26.5rem;
-  height: 26.5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 1.5rem;
-}
-
-.learn-more-section__card-figcaption,
-.whats-new-section__card-figcaption {
-  width: 19.44rem;
-  text-align: left;
-}
-
-.whats-new-section__card-figcaption {
-  width: 26.5rem;
-  padding: 0rem;
-}
-
-.learn-more-section__card-photo-title,
-.whats-new-section__card-photo-title {
-  font-weight: 500;
-  font-size: 2.5rem;
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.whats-new-section__card-photo-title {
-  display: block;
-  width: 23.25rem;
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 1.375rem;
-}
-
-.learn-more-section__card-photo-paragraph,
-.whats-new-section__card-photo-paragraph {
-  font-family: "Proxima Nova", sans-serif;
-  font-weight: 400;
-  font-size: 1.125rem;
-  text-align: left;
-  margin-bottom: 1.25rem;
-  line-height: 1.25rem;
-}
-
-.whats-new-section__card-photo-paragraph {
-  display: block;
-  height: 5rem;
-  margin-bottom: 1.25rem;
-}
-
-.learn-more-section__btn,
-.whats-new-section__btn {
-  padding: 26px 55px;
-  background-color: #ffffff;
-  border: 1px solid #111111;
-  border-radius: 5px;
-  font-family: "Proxima Nova", sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  color: #111111;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.whats-new-section__btn {
-  padding: 26px 34px;
-}
-
-.invitation {
-  position: relative;
-  background-image: url("/assets/images/invitation.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 384px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  overflow: hidden;
-}
-.invitation::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-.invitation__content {
-  position: relative;
-  z-index: 2;
-}
-.invitation__title {
-  font-family: "Lenora", serif;
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 1rem;
-}
-.invitation__description {
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-bottom: 2rem;
-}
-.invitation .btn {
-  display: inline-block;
-  padding: 15px 30px;
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 1rem;
-  color: white;
-  border: 2px solid white;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-.invitation .btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  object-fit: cover;
 }
 
 /* ===================== */
