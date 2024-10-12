@@ -881,3 +881,51 @@ figcaption {
     padding: 19px 60px;
   }
 }
+/*Шапка*/
+header {
+  margin: 0;
+}
+
+.header_div__conteiner {
+  display: flex;
+  justify-content: space-between;
+  background: #404759;
+  overflow: hidden;
+  margin: 0;
+}
+
+.header_div__content {
+  width: 13%;
+  height: 32px;
+  margin: 0px;
+  align-content: center;
+  text-align: center;
+}
+
+.header_div__content a {
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.header_nav__conteiner {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  overflow: hidden;
+  margin: 0;
+}
+
+.header_nav__content {
+  width: 14%;
+  height: 40px;
+  margin: 0px;
+  align-content: center;
+  text-align: center;
+}
+
+.header_nav__content a {
+  color: #000000;
+  font-size: 12px;
+  text-decoration: none;
+}
