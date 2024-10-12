@@ -30,22 +30,22 @@ body {
   color: #fff;
 
   &__content {
-    max-width: 300px;
+    padding-top: 100px;
     color: #fff;
     text-align: left;
   }
 
   &__title {
     font-family: "Lenora", serif;
-    font-size: 4.5rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    width: 536px;
+    height: 128px;
+    margin-bottom: 100px;
   }
 
   &__description {
     font-family: "Proxima Nova", sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.8;
+    width: 424px;
+    height: 72px;
     margin-bottom: 30px;
   }
 
@@ -58,11 +58,13 @@ body {
     text-decoration: none;
     border: 1px solid #fff;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    background-color: transparent; 
+  
     &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: transparent;
+      color: #fff; 
     }
-  }
+  }  
 }
 
 // Секция Shop By Category
@@ -84,12 +86,12 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    max-width: 424px;
+
 
     img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+      width: 512px;
+      height: 424px;
+
     }
 
     .shop-category__title {
@@ -99,6 +101,222 @@ body {
     }
   }
 }
+
+// Секция engagement-rings
+
+.engagement-rings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 656px;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+
+      .title {
+        font-size: 3rem;
+        font-family: 'Lenora', serif;
+        margin-bottom: 20px;
+      }
+
+      .description {
+        font-size: 20px;
+        font-family: "Proxima Nova", sans-serif;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1rem;
+      color: #000;
+      text-decoration: none;
+      border: 2px solid #000;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .images {
+      position: relative;
+      max-width: 50%;
+
+      .main-image {
+        width: 763px; 
+        height: 528px;
+        object-fit: cover;
+      }
+
+      .overlay-image {
+        position: absolute;
+        bottom: 50px;
+        left: -50px;
+        width: 198px;
+        height: 198px;
+        border-radius: 50%;
+        border: 5px solid white;
+      }
+    }
+  }
+}
+
+
+
+
+// Секция invitation
+.invitation {
+  position: relative;
+  background-image: url("/assets/images/invitation.jpg"); 
+  background-size: cover;
+  background-position: center;
+  height: 384px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden; 
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2; 
+  }
+
+  &__title {
+    font-family: "Lenora", serif; 
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-family: "Proxima Nova", sans-serif; 
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1rem;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+
+// Секция wedding-rings
+
+.wedding-rings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 656px;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+
+      .title {
+        font-size: 3rem;
+        font-family: 'Lenora', serif;
+        margin-bottom: 20px;
+      }
+
+      .description {
+        font-size: 20px;
+        font-family: "Proxima Nova", sans-serif;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1rem;
+      color: #000;
+      text-decoration: none;
+      border: 2px solid #000;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .images {
+      position: relative;
+      max-width: 50%;
+
+      .main-image {
+        width: 763px; 
+        height: 528px;
+        object-fit: cover;
+      }
+
+      .overlay-image {
+        position: absolute;
+        bottom: 50px;
+        left: -50px;
+        width: 198px;
+        height: 198px;
+        border-radius: 50%;
+        border: 5px solid white;
+      }
+    }
+  }
+}
+
+
 
 //Секция 11 Our Favourites (слайдер)
 h2 {
@@ -422,7 +640,7 @@ figcaption {
 /* ===================== */
 
 /* Для экранов с шириной от 1920px */
-@media screen and (min-width: 1920px) {
+@media screen and (max-width: 1920px) {
   .hero__title {
     font-size: 6rem;
   }
@@ -479,7 +697,40 @@ figcaption {
     font-size: 0.8rem;
     padding: 10px 20px;
   }
+
+  .wedding-rings {
+    position: relative;
+
+    .container {
+      position: relative;
+      width: 100%;
+
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // Центрирование текста и кнопки
+      }
+    }
+  }
+
+  .engagement-rings {
+    position: relative;
+
+    .container {
+      position: relative;
+      width: 100%;
+
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // Центрирование текста и кнопки
+      }
+    }
+  }
 }
+
 
 /* Для мобильных устройств с шириной до 320px */
 @media screen and (max-width: 320px) {

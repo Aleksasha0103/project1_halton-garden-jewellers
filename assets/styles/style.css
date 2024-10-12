@@ -1,35 +1,25 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @font-face {
-  src: url("/assets/fonts/Lenora/LenoraPremium-Regular.eot") format("eot"),
-    url("/assets/fonts/Lenora/LenoraPremium-Regular.woff") format("woff"),
-    url("/assets/fonts/Lenora/LenoraPremium-Regular.woff2") format("woff2"),
-    url("/assets/fonts/Lenora/LenoraPremium-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Lenora/LenoraPremium-Regular.eot") format("eot"), url("/assets/fonts/Lenora/LenoraPremium-Regular.woff") format("woff"), url("/assets/fonts/Lenora/LenoraPremium-Regular.woff2") format("woff2"), url("/assets/fonts/Lenora/LenoraPremium-Regular.ttf") format("truetype");
   font-family: "Lenora";
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
-  src: url("/assets/fonts/Lenora/LenoraPremium-Medium.eot") format("eot"),
-    url("/assets/fonts/Lenora/LenoraPremium-Medium.woff") format("woff"),
-    url("/assets/fonts/Lenora/LenoraPremium-Medium.woff2") format("woff2"),
-    url("/assets/fonts/Lenora/LenoraPremium-Medium.ttf") format("truetype");
+  src: url("/assets/fonts/Lenora/LenoraPremium-Medium.eot") format("eot"), url("/assets/fonts/Lenora/LenoraPremium-Medium.woff") format("woff"), url("/assets/fonts/Lenora/LenoraPremium-Medium.woff2") format("woff2"), url("/assets/fonts/Lenora/LenoraPremium-Medium.ttf") format("truetype");
   font-family: "Lenora";
   font-weight: 500;
 }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../assets/fonts/Proxima Nova/ProximaNova-Regular.woff2")
-      format("woff2"),
-    url("../assets/fonts/Proxima Nova/ProximaNova-Regular.woff") format("woff");
+  src: url("../assets/fonts/Proxima Nova/ProximaNova-Regular.woff2") format("woff2"), url("../assets/fonts/Proxima Nova/ProximaNova-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Proxima Nova Bold";
-  src: url("../assets/fonts/Proxima Nova/ProximaNova-Bold.woff2")
-      format("woff2"),
-    url("../assets/fonts/Proxima Nova/ProximaNova-Bold.woff") format("woff");
+  src: url("../assets/fonts/Proxima Nova/ProximaNova-Bold.woff2") format("woff2"), url("../assets/fonts/Proxima Nova/ProximaNova-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -59,20 +49,20 @@ body {
   color: #fff;
 }
 .hero__content {
-  max-width: 300px;
+  padding-top: 100px;
   color: #fff;
   text-align: left;
 }
 .hero__title {
   font-family: "Lenora", serif;
-  font-size: 4.5rem;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  width: 536px;
+  height: 128px;
+  margin-bottom: 100px;
 }
 .hero__description {
   font-family: "Proxima Nova", sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.8;
+  width: 424px;
+  height: 72px;
   margin-bottom: 30px;
 }
 .hero__button {
@@ -84,10 +74,11 @@ body {
   text-decoration: none;
   border: 1px solid #fff;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  background-color: transparent;
 }
 .hero__button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  color: #fff;
 }
 
 .shop-category {
@@ -107,18 +98,198 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  max-width: 424px;
 }
 .shop-category .shop-category__item img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-  object-fit: cover;
+  width: 512px;
+  height: 424px;
 }
 .shop-category .shop-category__item .shop-category__title {
   font-family: "Proxima Nova", sans-serif;
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+.engagement-rings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.engagement-rings .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 656px;
+}
+.engagement-rings .container .content {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+.engagement-rings .container .content .title {
+  font-size: 3rem;
+  font-family: "Lenora", serif;
+  margin-bottom: 20px;
+}
+.engagement-rings .container .content .description {
+  font-size: 20px;
+  font-family: "Proxima Nova", sans-serif;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.engagement-rings .container .button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.engagement-rings .container .button:hover {
+  background-color: transparent;
+}
+.engagement-rings .container .images {
+  position: relative;
+  max-width: 50%;
+}
+.engagement-rings .container .images .main-image {
+  width: 763px;
+  height: 528px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.engagement-rings .container .images .overlay-image {
+  position: absolute;
+  bottom: 50px;
+  left: -50px;
+  width: 198px;
+  height: 198px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.invitation {
+  position: relative;
+  background-image: url("/assets/images/invitation.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 384px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+.invitation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.invitation__content {
+  position: relative;
+  z-index: 2;
+}
+.invitation__title {
+  font-family: "Lenora", serif;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.invitation__description {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+.invitation .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 1rem;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.invitation .btn:hover {
+  background-color: transparent;
+}
+
+.wedding-rings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.wedding-rings .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 656px;
+}
+.wedding-rings .container .content {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+.wedding-rings .container .content .title {
+  font-size: 3rem;
+  font-family: "Lenora", serif;
+  margin-bottom: 20px;
+}
+.wedding-rings .container .content .description {
+  font-size: 20px;
+  font-family: "Proxima Nova", sans-serif;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.wedding-rings .container .button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.wedding-rings .container .button:hover {
+  background-color: transparent;
+}
+.wedding-rings .container .images {
+  position: relative;
+  max-width: 50%;
+}
+.wedding-rings .container .images .main-image {
+  width: 763px;
+  height: 528px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wedding-rings .container .images .overlay-image {
+  position: absolute;
+  bottom: 50px;
+  left: -50px;
+  width: 198px;
+  height: 198px;
+  border-radius: 50%;
+  border: 5px solid white;
 }
 
 h2 {
@@ -202,14 +373,237 @@ figcaption {
   max-width: 19rem;
   max-height: 19rem;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
+}
+
+.learn-more-section,
+.whats-new-section {
+  width: 1440px;
+  margin: 0 auto;
+  border-bottom: 1px solid #000000;
+  position: relative;
+}
+.learn-more-section h3,
+.whats-new-section h3 {
+  color: #ffffff;
+}
+
+.learn-more-section::before,
+.whats-new-section::before {
+  content: "";
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  background: linear-gradient(111.01deg, rgba(4, 0, 177, 0.2) -8.76%, rgba(0, 0, 0, 0) 102.99%), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #363840;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.learn-more-section__common-container,
+.whats-new-section__common-container {
+  width: 1440px;
+  margin: 0 auto;
+  padding-top: 2.187rem;
+}
+
+.learn-more-section__all-cards,
+.whats-new-section__all-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-top: 6.125rem;
+  margin-bottom: 5rem;
+}
+
+.whats-new-section__all-cards {
+  margin-bottom: 5.5rem;
+}
+
+.learn-more-section__card-photo .whats-new-section__card-photo {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.learn-more-section__card1,
+.learn-more-section__card2,
+.learn-more-section__card3,
+.whats-new-section__card1,
+.whats-new-section__card2,
+.whats-new-section__card3 {
+  width: 26.5rem;
+  position: relative;
+}
+
+.learn-more-section__card1:hover:after,
+.learn-more-section__card2:hover:after,
+.learn-more-section__card3:hover:after,
+.whats-new-section__card1:hover:after,
+.whats-new-section__card2:hover:after,
+.whats-new-section__card3:hover:after {
+  content: "";
+  width: 100%;
+  height: 424px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: url("/assets/images/learn-more_img1_hover.png") no-repeat;
+}
+
+.learn-more-section__card2:hover:after {
+  background: url("/assets/images/learn-more_img2_hover.png") no-repeat;
+}
+
+.learn-more-section__card3:hover:after {
+  background: url("/assets/images/learn-more_img3_hover.png") no-repeat;
+}
+
+.whats-new-section__card1:hover:after {
+  background: url("/assets/images/learn-more_img3.png") no-repeat;
+}
+
+.whats-new-section__card2:hover:after {
+  background: url("/assets/images/learn-more_img2.png") no-repeat;
+}
+
+.whats-new-section__card3:hover:after {
+  background: url("/assets/images/learn-more_img3_hover.png") no-repeat;
+}
+
+.learn-more-section__card-photo,
+.whats-new-section__card-photo {
+  width: 26.5rem;
+  height: 26.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.learn-more-section__card-figcaption,
+.whats-new-section__card-figcaption {
+  width: 19.44rem;
+  text-align: left;
+}
+
+.whats-new-section__card-figcaption {
+  width: 26.5rem;
+  padding: 0rem;
+}
+
+.learn-more-section__card-photo-title,
+.whats-new-section__card-photo-title {
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.whats-new-section__card-photo-title {
+  display: block;
+  width: 23.25rem;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.375rem;
+}
+
+.learn-more-section__card-photo-paragraph,
+.whats-new-section__card-photo-paragraph {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  text-align: left;
+  margin-bottom: 1.25rem;
+  line-height: 1.25rem;
+}
+
+.whats-new-section__card-photo-paragraph {
+  display: block;
+  height: 5rem;
+  margin-bottom: 1.25rem;
+}
+
+.learn-more-section__btn,
+.whats-new-section__btn {
+  padding: 26px 55px;
+  background-color: #ffffff;
+  border: 1px solid #111111;
+  border-radius: 5px;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #111111;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.whats-new-section__btn {
+  padding: 26px 34px;
+}
+
+.invitation {
+  position: relative;
+  background-image: url("/assets/images/invitation.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 384px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+.invitation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.invitation__content {
+  position: relative;
+  z-index: 2;
+}
+.invitation__title {
+  font-family: "Lenora", serif;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.invitation__description {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+.invitation .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 1rem;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.invitation .btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* ===================== */
 /* Медиазапросы для адаптивности */
 /* ===================== */
 /* Для экранов с шириной от 1920px */
-@media screen and (min-width: 1920px) {
+@media screen and (max-width: 1920px) {
   .hero__title {
     font-size: 6rem;
   }
@@ -256,6 +650,32 @@ figcaption {
     font-size: 0.8rem;
     padding: 10px 20px;
   }
+  .wedding-rings {
+    position: relative;
+  }
+  .wedding-rings .container {
+    position: relative;
+    width: 100%;
+  }
+  .wedding-rings .container .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .engagement-rings {
+    position: relative;
+  }
+  .engagement-rings .container {
+    position: relative;
+    width: 100%;
+  }
+  .engagement-rings .container .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 /* Для мобильных устройств с шириной до 320px */
 @media screen and (max-width: 320px) {
@@ -274,245 +694,4 @@ figcaption {
     font-size: 0.7rem; /* Маленький текст кнопки */
     padding: 8px 15px; /* Ещё меньше кнопка */
   }
-}
-/* 4 start*/
-.why-choose-us-section {
-  display: flex;
-  flex-direction: column;
-  font-family: Proxima Nova, sans-serif;
-}
-
-.why-choose-us-background {
-  background: var(--Main-Gray, #f2f2f2);
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 65px 80px;
-}
-
-.why-choose-us-container {
-  display: flex;
-  width: 100%;
-  max-width: 1188px;
-  flex-direction: row;
-  margin: 30px;
-  justify-content: center;
-}
-
-.why-choose-us-title {
-  color: #000;
-  font-size: 20px;
-  font-weight: 600;
-  align-self: center;
-  flex-direction: column;
-}
-
-.feature-item {
-  justify-content: space-between;
-  text-align: center;
-  margin-top: 30px;
-}
-
-h2 {
-  text-align: center;
-}
-
-.why-choose-us-image {
-  aspect-ratio: 8.2;
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  max-width: 1160px;
-}
-
-.why-choose-us-image {
-  text-align: center;
-}
-
-.why-choose-us-features {
-  display: flex;
-  margin-top: 29px;
-  gap: 20px;
-  font-size: 14px;
-  color: #000;
-  font-weight: 400;
-  text-align: justify;
-  text-transform: uppercase;
-  letter-spacing: 0.28px;
-  line-height: 20px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.feature-item {
-  width: 277px;
-}
-
-.feature-item-wide {
-  width: 323px;
-}
-
-.feature-item-widest {
-  width: 311px;
-}
-
-@media (max-width: 991px) {
-  .why-choose-us-background {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-
-  .why-choose-us-container {
-    max-width: 100%;
-  }
-
-  .why-choose-us-image {
-    max-width: 100%;
-    margin: 40px 6px 0 0;
-  }
-
-  .why-choose-us-features {
-    max-width: 100%;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-/* 4 end*/
-
-/* 5 start */
-.testimonial-container {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 103px 70px 7px;
-}
-
-.testimonial-content {
-  display: flex;
-  width: 100%;
-  max-width: 1054px;
-  align-items: flex-start;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-left: 24px;
-}
-
-.quote-mark {
-  color: #111;
-  text-align: left;
-  -webkit-text-stroke: 2px #000;
-  font: 400 163px Gentium Basic, sans-serif;
-}
-
-.testimonial-text-container {
-  margin-top: 18px;
-  flex-grow: 1;
-  flex-basis: auto;
-}
-
-.testimonial-columns {
-  display: flex;
-  gap: 20px;
-}
-
-.testimonial-text-column {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-}
-
-.testimonial-text-wrapper {
-  display: flex;
-  margin-right: -66px;
-  flex-direction: column;
-  align-items: flex-start;
-  font-family: Proxima Nova, sans-serif;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-.testimonial-text {
-  color: #000;
-  font-size: 22px;
-  align-self: stretch;
-}
-
-.testimonial-author {
-  color: #000;
-  font-size: 18px;
-  margin-top: 49px;
-}
-
-.author-signature {
-  width: 115px;
-  margin-top: 6px;
-}
-
-.testimonial-image-column {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  margin-left: 20px;
-}
-
-.testimonial-image {
-  width: 100%;
-  border-radius: 0;
-  margin-top: 7px;
-  flex-grow: 1;
-}
-
-@media (max-width: 991px) {
-  .testimonial-container {
-    padding: 100px 20px 0;
-  }
-
-  .testimonial-content {
-    max-width: 100%;
-  }
-
-  .quote-mark {
-    font-size: 40px;
-  }
-
-  .testimonial-text-container {
-    max-width: 100%;
-  }
-
-  .testimonial-columns {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
-
-  .testimonial-text-column,
-  .testimonial-image-column {
-    width: 100%;
-  }
-
-  .testimonial-text-wrapper {
-    max-width: 100%;
-  }
-
-  .testimonial-author {
-    margin-top: 40px;
-  }
-
-  .testimonial-image {
-    max-width: 100%;
-  }
-}
-/* 5 end */
+}/*# sourceMappingURL=style.css.map */
