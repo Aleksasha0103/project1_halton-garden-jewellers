@@ -1,6 +1,6 @@
 // Подключаем Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@import "fonts"; // Подключение файла с шрифтами Proxima Nova
+@import "fonts"; // Подключение файла с шрифтами
 
 // Основные стили для всего документа
 * {
@@ -340,13 +340,14 @@ figcaption {
 
 .jewellery-slider {
   max-width: 1440px;
-  margin: 3.75rem auto 6rem auto;
+  margin: 3.75rem auto 0rem auto;
   border-bottom: 1px solid #000000;
   border-top: 1px solid #000000;
 }
 
 .jewellery-slider__container {
   position: relative;
+  margin-bottom: 6rem;
   .owl-nav {
     position: absolute;
     top: 50%;
@@ -395,6 +396,184 @@ figcaption {
   object-fit: cover;
 }
 // Конец секции 11 Our Favourites (слайдер)
+
+// Секция 12 Budrevich has a five-star rating (отзывы)
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.reviews__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  border-bottom: 1px solid #000000;
+}
+
+.reviews__heading {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto 3.125rem auto;
+  justify-content: space-between;
+}
+
+.reviews__heading__texts {
+  justify-content: flex-start;
+}
+
+.reviews__title {
+  display: block;
+  width: 26.5rem;
+  font-family: "Lenora", sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-align: left;
+  line-height: 3rem;
+  margin-left: 10.56rem;
+  margin-top: 3.8rem;
+}
+
+.reviews_paragraph {
+  display: block;
+  width: 26.5rem;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-align: left;
+  line-height: 1.5rem;
+  margin-left: 10.56rem;
+  margin-top: 2rem;
+}
+
+.reviews__heading__stars-rating {
+  margin-top: 4.18rem;
+  margin-right: 10.56rem;
+}
+
+.reviews_icon-stars {
+  text-align: right;
+}
+
+.reviews__heading__text-rating,
+.reviews__heading__mark-rating {
+  text-align: right;
+  margin-top: 0.95rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.reviews__heading__mark-rating {
+  font-size: 1.56rem;
+  padding-right: 1rem;
+}
+
+.reviews__heading__stars-rating_mobile {
+  visibility: hidden;
+}
+
+.reviews__grid-reviews {
+  display: grid;
+  grid-template-rows: repeat(9, 6.25rem);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 1.75rem;
+  justify-content: space-between;
+  align-content: space-between;
+  position: relative;
+}
+
+.reviews__grid-reviews::before {
+  content: "";
+  width: 100%;
+  height: 18rem;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 5.5%, rgba(255, 255, 255, 0.551) 21.77%, #ffffff 60%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.reviews__grid-reviews::after {
+  content: "See all Google reviews";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  left: 45%;
+  bottom: 3.125rem;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.reviews__grid-reviews__grid-background {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 2rem 1.875rem;
+}
+
+.reviews__grid-reviews__review1 {
+  grid-row: 1/5;
+  grid-column: 1/2;
+}
+
+.reviews__grid-reviews__review2 {
+  grid-row: 5/9;
+  grid-column: 1/2;
+}
+
+.reviews__grid-reviews__review3 {
+  grid-row: 1/6;
+  grid-column: 2/3;
+}
+
+.reviews__grid-reviews__review4 {
+  grid-row: 6/10;
+  grid-column: 2/3;
+}
+
+.reviews__grid-reviews__review5 {
+  grid-row: 1/5;
+  grid-column: 3/4;
+}
+
+.reviews__grid-reviews__review6 {
+  grid-row: 5/9;
+  grid-column: 3/4;
+}
+
+.reviews__grid-reviews__review-photo {
+  float: left;
+  margin-right: 1.75rem;
+}
+
+.reviews__grid-reviews__review-name {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: left;
+  margin-bottom: 0.31rem;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.reviews__grid-reviews__review-text {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  font-size: 1.375rem;
+  text-align: left;
+  line-height: 2rem;
+}
+
+// Конец секции 12 Budrevich has a five-star rating (отзывы)
 
 // Секция 13 Learn more и Секция 15 What's New
 
@@ -650,6 +829,15 @@ figcaption {
   }
 }
 
+/* Для экранов с шириной до 1440px */
+/*Адаптивы для секции 12 Budrevich has a five-star rating (отзывы)*/
+
+@media screen and (max-width: 1440px) {
+  .reviews__container {
+    max-width: 1328px;
+  }
+}
+
 /* Для экранов с шириной до 1280px */
 @media screen and (max-width: 1280px) {
   .hero__title {
@@ -669,6 +857,51 @@ figcaption {
   /*Адаптивы для слайдера */
   .jewellery-slider__container {
     max-width: 1280px;
+  }
+
+  /*Адаптивы для секции 12 Budrevich has a five-star rating (отзывы)*/
+  .reviews__container {
+    max-width: 1168px;
+  }
+
+  .reviews__grid-reviews {
+    grid-template-rows: 17rem 17rem 0rem 0rem 0rem 0rem 0rem 0rem 0rem;
+    grid-template-columns: repeat(3, 23.125rem);
+  }
+
+  .reviews__grid-reviews__review1 {
+    grid-row: 1/3;
+    grid-column: 1/2;
+  }
+
+  .reviews__grid-reviews__review3 {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
+
+  .reviews__grid-reviews__review5 {
+    grid-row: 1/3;
+    grid-column: 3/4;
+  }
+
+  .reviews__grid-reviews__review2,
+  .reviews__grid-reviews__review4,
+  .reviews__grid-reviews__review6 {
+    visibility: hidden;
+  }
+
+  .reviews__grid-reviews::before {
+    height: 34rem;
+  }
+
+  .reviews__grid-reviews::after {
+    bottom: 3.44rem;
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+
+  .reviews__grid-reviews__review-text {
+    font-size: 1.375rem;
   }
 
   /*Адаптивы для секций 11 и 13 */
@@ -708,6 +941,15 @@ figcaption {
   .learn-more-section__card-photo,
   .whats-new-section__card-photo {
     width: 23.187rem;
+  }
+
+  .learn-more-section__card1:hover:after,
+  .learn-more-section__card2:hover:after,
+  .learn-more-section__card3:hover:after,
+  .whats-new-section__card1:hover:after,
+  .whats-new-section__card2:hover:after,
+  .whats-new-section__card3:hover:after {
+    height: 368px;
   }
 
   .learn-more-section__card-photo,
@@ -761,10 +1003,108 @@ figcaption {
     padding: 10px 20px;
   }
 
+  /*Адаптивы для секции 12 Budrevich has a five-star rating (отзывы)*/
+  .reviews {
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    max-width: 768;
+  }
+
+  .reviews__container {
+    max-width: 686px;
+    margin: 0 auto;
+    padding: 0rem;
+  }
+
+  .reviews__heading {
+    justify-content: left;
+  }
+
+  .reviews__heading__stars-rating_mobile {
+    visibility: visible;
+    margin-top: 2rem;
+  }
+
+  .reviews__heading__stars-rating {
+    visibility: hidden;
+  }
+
+  .reviews__title {
+    width: 17.63rem;
+    font-size: 1.75rem;
+    text-align: left;
+    line-height: 2rem;
+    margin-left: 0rem;
+    margin-top: 1.56rem;
+  }
+
+  .reviews_paragraph {
+    width: 17.63rem;
+    font-size: 0.875rem;
+    text-align: left;
+    line-height: 1rem;
+    margin-left: 0rem;
+    margin-top: 1.375rem;
+    margin-bottom: 2rem;
+  }
+
+  .reviews__grid-reviews__grid-background {
+    background-color: #ffffff;
+    border: 1px solid #000;
+  }
+
+  .reviews__grid-reviews {
+    grid-template-rows: 13rem 10rem 18rem 0rem 0rem 0rem 0rem 0rem 0rem;
+    grid-template-columns: 20.5rem 20.5rem;
+  }
+
+  .reviews__grid-reviews__review1 {
+    grid-row: 1/3;
+    grid-column: 1/2;
+  }
+
+  .reviews__grid-reviews__review5 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  .reviews__grid-reviews__review3 {
+    grid-row: 1/3;
+    grid-column: 2/3;
+  }
+
+  .reviews__grid-reviews__review2 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    visibility: visible;
+  }
+
+  .reviews__grid-reviews__review4,
+  .reviews__grid-reviews__review6 {
+    visibility: hidden;
+    grid-row: 1/3;
+    grid-column: 1/2;
+  }
+
+  .reviews__grid-reviews::before {
+    visibility: hidden;
+  }
+
+  .reviews__grid-reviews::after {
+    bottom: 2rem;
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+
+  .reviews__grid-reviews__review-text {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+
   /*Адаптивы для секций 11 и 13 */
-  .learn-more-section,
-  .whats-new-section {
-    max-width: 768px;
+  .learn-more-section_common-container,
+  .whats-new-section_common-container {
+    max-width: 686px;
   }
 
   .learn-more-section::before,
@@ -797,6 +1137,15 @@ figcaption {
   .learn-more-section__card-photo,
   .whats-new-section__card-photo {
     width: 12.5rem;
+  }
+
+  .learn-more-section__card1:hover:after,
+  .learn-more-section__card2:hover:after,
+  .learn-more-section__card3:hover:after,
+  .whats-new-section__card1:hover:after,
+  .whats-new-section__card2:hover:after,
+  .whats-new-section__card3:hover:after {
+    height: 192px;
   }
 
   .learn-more-section__card-photo,
@@ -894,6 +1243,114 @@ figcaption {
     padding: 8px 15px; /* Ещё меньше кнопка */
   }
 
+  /*Адаптивы для секции 12 Budrevich has a five-star rating (отзывы)*/
+  .reviews {
+    background-color: #f2f2f2;
+    max-width: 320px;
+  }
+
+  .reviews__container {
+    max-width: 292px;
+  }
+
+  .reviews__grid-reviews__grid-background {
+    background-color: #ffffff;
+    border: 1px solid #000;
+  }
+
+  .reviews__grid-reviews {
+    grid-template-rows: 19rem 25rem;
+    grid-template-columns: 18.25rem;
+    margin-top: 0rem;
+    margin-bottom: 3.125rem;
+  }
+
+  .reviews__grid-reviews__review1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .reviews__grid-reviews__review3 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .reviews__grid-reviews__review4,
+  .reviews__grid-reviews__review6,
+  .reviews__grid-reviews__review5,
+  .reviews__grid-reviews__review2 {
+    visibility: hidden;
+    grid-row: 1/3;
+    grid-column: 1/2;
+  }
+
+  .reviews__grid-reviews::before {
+    visibility: hidden;
+  }
+
+  .reviews__grid-reviews::after {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    left: 25%;
+    top: 102%;
+  }
+
+  .reviews__grid-reviews__review-text {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+
+  .reviews__title {
+    width: 100%;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    margin: 1.3rem 0rem;
+  }
+
+  .reviews_paragraph {
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    margin-bottom: 1.75rem;
+    justify-self: start;
+  }
+
+  .reviews_icon-stars_mobile {
+    text-align: left;
+  }
+
+  .reviews__heading__stars-rating_mobile {
+    margin-top: 2rem;
+  }
+
+  .reviews_icon-stars-mobile {
+    width: 108px;
+    height: 32px;
+  }
+
+  .reviews__heading__text-rating_mobile {
+    visibility: visible;
+    font-size: 0.875rem;
+  }
+
+  .reviews__heading__mark-rating_mobile {
+    font-size: 1rem;
+    object-fit: cover;
+  }
+
+  .reviews__heading__stars-rating {
+    visibility: hidden;
+  }
+
+  .reviews__heading__texts {
+    justify-items: left;
+    margin: 0rem;
+  }
+
+  .reviews_paragraph {
+    margin: 0rem !important;
+  }
+
   /*Адаптивы для секций 11 и 13 */
   .learn-more-section,
   .whats-new-section {
@@ -907,7 +1364,7 @@ figcaption {
 
   .learn-more-section__common-container,
   .whats-new-section__common-container {
-    max-width: 320px;
+    max-width: 264px;
     padding-top: 3.3rem;
   }
 
@@ -927,6 +1384,15 @@ figcaption {
   .learn-more-section__card-photo,
   .whats-new-section__card-photo {
     width: 16.5rem;
+  }
+
+  .learn-more-section__card1:hover:after,
+  .learn-more-section__card2:hover:after,
+  .learn-more-section__card3:hover:after,
+  .whats-new-section__card1:hover:after,
+  .whats-new-section__card2:hover:after,
+  .whats-new-section__card3:hover:after {
+    height: 256px;
   }
 
   .learn-more-section__card-photo,
